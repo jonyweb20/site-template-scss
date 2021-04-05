@@ -1,0 +1,67 @@
+/*@media (min-width:320px) and (max-width:480px)*/
+@media screen and (max-width:768px){
+    .container {
+        grid-auto-columns: 1fr 1fr;
+        grid-template-rows: repeat(8, 1fr)}
+    header {
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 1/2;}
+    .hero{
+        display: none;}
+    .sitebar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 1/4;
+        grid-row: 2/4;
+        justify-content: flex-start; 
+        border-top: none;}
+    .sitebar ul{
+        display: flex;
+        margin-top: 1em;}
+    .sitebar li{
+        margin-left: 20px;}
+    main{
+        grid-column: 1/4;
+        grid-row: 4/5;}
+    main h1{
+        text-align: center;}
+    .help{
+        grid-column: 1/4;
+        grid-row: 5/6;}
+    .help p {
+        padding: .2em;}
+    .gallery{
+       grid-column: 1/4;
+        grid-row: 6/7;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .gallery img {
+    width: 100%;
+    }
+    .sitebar-related {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 1/4;
+        grid-row: 7/8;
+    }
+    .sitebar-related ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sitebar-related li{
+        margin-left: 2em;
+    }
+    .sitebar-related li::before{
+        margin: -10px;
+    }
+    footer{
+        grid-column: 1/4;
+        grid-row: 8/9;
+    }
+    footer p{
+        font-size: 12px;
+    }
+}
