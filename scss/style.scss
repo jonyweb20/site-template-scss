@@ -1,9 +1,12 @@
 @import "variables";
-
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
 body{
     font-family: 'Montserrat', sans-serif; 
-    background-color: bg-c;
-    color: #434343;
+    background-color: $bg-c;
+    color: $bodyc;
     a {
     text-decoration: none;
     color: inherit;}
@@ -14,13 +17,13 @@ body{
     
 .container {
 display: grid;
-grid-auto-columns: 371px 278px 277px;
+grid-auto-columns: 40% 30% 30%;
 grid-template-rows: repeat(7, auto);
 grid-column-gap: 8px;
 grid-row-gap: 2px;
 max-width: 993px;
 margin: 0px 0px 0px 49px;
-background-color: bg-c;
+background-color: $bg-c;
 padding: 0px 0px 0px 0px;
     header {
     display: flex;
@@ -28,7 +31,7 @@ padding: 0px 0px 0px 0px;
     grid-column: 1/4;
     grid-row: 1/2;
     border-bottom: 2px solid #b0e0ea;
-    color: bg-foot;
+    color: $bg-foot;
     padding-top:5px;
     padding-bottom: 4px;
         p {
@@ -44,18 +47,18 @@ padding: 0px 0px 0px 0px;
         align-self: center;
         height: 2em;
         font-size: 0.71em;
-        background-color: #51bb7b;
+        background-color: $bg-but;
         margin-bottom: 0.2em;
-        color: bg-c;
+        color: $bg-c;
         padding: 5px 21px 6.8px 20px;
         letter-spacing: 0.2px;
         border-radius: 25px;
         border-style: none;
             &:focus {
-            background-color: rgba(39, 129, 74, 0.9);}
+            background-color: $f-but;}
         }
         i {
-        color:bord;
+        color: $bord;
         font-size: 1.86em;
         padding-top: 14px;
         padding-left: 0px;
@@ -71,8 +74,8 @@ padding: 0px 0px 0px 0px;
     .sitebar {
     grid-column: 1/2;
     grid-row: 3/5;
-    border-top: 3px solid #693f7e;
-    background-color: #f9f9f6;
+    border-top: 3px solid $row-2;
+    background-color: $bg-sb;
     padding-top: 1.5em;
     padding-left:1em;
         ul {
@@ -90,7 +93,7 @@ padding: 0px 0px 0px 0px;
     grid-row: 2/4;
     padding-bottom: 1em;
         h1 {
-        color:bord; 
+        color:$bord; 
         font-weight: 700;
         font-size: 1.65em;
         word-spacing: 0.6px;
@@ -100,14 +103,14 @@ padding: 0px 0px 0px 0px;
         padding-top: 0.5em;
         font-size: 0.8em;
         font-weight: 500;
-        color: #453f3f;}
+        color: $pg;}
     }
     .help {
     display: flex;
     justify-content: flex-start;
     grid-column: 2/4;
     grid-row: 4/5;
-    border: 1.5px solid #d9d9d9;
+    border: 1.5px solid $help-bord;
     padding: 0.8em;
     margin-top: 3.5em;
        .help-item {
@@ -127,12 +130,12 @@ padding: 0px 0px 0px 0px;
         font-size: .65em;}
         button {
         font-size: 11px;
-        border: 2px solid bord;
+        border: 2px solid $bord;
         margin-bottom: -2px;
         padding: 0.55em 0.57em 0.6em 0.55em;
-        color: bord;
+        color: $bord;
         font-weight: 500;
-        background-color: bg-c;
+        background-color: $bg-c;
         cursor: pointer;}
     }
     .gallery {
@@ -155,7 +158,7 @@ padding: 0px 0px 0px 0px;
         margin:-1.6px 0 0 0;
         letter-spacing: -0.2px;
         word-spacing: -1.1px;
-        border-bottom: 1px solid #d9d9d9;}
+        border-bottom: 1px solid $help-bord;}
         ul {
         padding: 0.8px 0 0 19.1px;
         line-height: 21.8px;}
@@ -164,11 +167,11 @@ padding: 0px 0px 0px 0px;
         a {
         font-size: .75em;
         font-weight: 500;
-        color: #838383;
+        color: $h3-sr;
         margin-top: -0.28em;}
     }
     footer {
-    background-color: bg-foot;
+    background-color: $bg-foot;
     grid-column: 1/4;
     grid-row: 7/8;
     text-align: center;
@@ -176,7 +179,7 @@ padding: 0px 0px 0px 0px;
     margin-top: 0.4em;
         h3{
         font-size: 0.97em;
-        color: bg-c;
+        color: $bg-c;
         margin-bottom: .5em;}
         p {
         font-size: 0.7em;

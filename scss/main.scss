@@ -1,4 +1,26 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;}
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-rows: repeat(8, auto);
+    }
+    .hero {
+        display: none;
+    }
+    .sidebar {
+        grid-column: 1/4;
+        grid-row: 2/3;
+        border-top: none;
+    }
+    .sidebar h3 {
+        text-align: center;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;   
+    }
+    main {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+}
