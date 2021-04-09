@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;800&display=swap');
 $bg-foot: #9f9c9c;
-$bg-c: #cc7474;
-$bord: #50c6db;
+$bg-col: #fff;
+$font: #50c6db;
 $pg: #918b8b;
 $bodyc: #434343;
 $bg-but:#51bb7b;
@@ -10,3 +10,13 @@ $row-2: #693f7e;
 $bg-sb: #f9f9f6;
 $help-bord: #d9d9d9;
 $h3-sr:#838383;
+$font-f: 'Montserrat', sans-serif;
+
+@mixin header-but($p1, $p2, $p3, $p4, $p5, $p6){
+            font-size: $p1;
+            color: $p2;
+            background-color: $p3;
+            border-radius: $p4;
+            margin: $p5;
+            padding: $p6;
+}

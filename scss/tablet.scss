@@ -1,60 +1,162 @@
+@import "variables";
 @media screen and (max-width:768px){
-    .container {
-        grid-template-rows: repeat(8, 1fr)}
+font-family: 'Montserrat', sans-serif;
+.container { 
+    grid-template-rows: repeat(7, 1fr);
     header {
         display: flex;
-        grid-column: 1/2;
-        grid-row: 1/2;}
+        justify-content: space-around;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        margin-top: 1.6em;
+        ul{
+            display: none;
+        }
+        i{
+        font-size: 2em;
+        color: $font;
+        }
+        button {
+            @include header-but(0.71em, $bg-col, $bg-but, 25px, 0 0 0.2em 0, 5px 21px 6.8px 20px);
+            align-self: center;
+            height: 2em;
+            letter-spacing: 0.2px;
+            border-style: none;
+                &:focus {
+                background-color: $f-but;}
+        }
+        }
     .hero{
-        display: none;}
+        display: none;
+        }
     .sitebar{
         display: flex;
         flex-direction: column;
-        align-items: center;
         grid-column: 1/4;
         grid-row: 2/4;
-        justify-content: flex-start; 
-        border-top: none;}
-    .sitebar ul{
-        display: flex;
-        margin-top: 1em;}
-    .sitebar li{
-        margin-left: 20px;}
+        border-top: none;
+        margin-top: 1em;
+
+        ul{
+            display: flex;
+            justify-content: center;
+            margin: 1em 0.5em;
+            list-style: none;
+            color: $h3-sr;}
+        li{
+            align-self: center;
+            margin-left: 15px;
+            border-bottom: 1px solid $font;
+            &:active {
+                border-bottom: 1px solid $bg-but;
+                    background-color: $f-but;}
+        }
+        h4 {
+            align-self: center;
+            color: $h3-sr;     
+        }
+        }
+    
     main{
         grid-column: 1/4;
-        grid-row: 4/5;}
-    main h1{
-        text-align: center;}
+        grid-row: 4/5;
+        h1{
+            font-size: 1.65em;
+            font-weight: 700;
+            text-align: center;
+            color:$font;
+            padding-top: 0.5em;}
+        p{
+            font-size: 1em;
+            font-weight: 500;
+            color: $pg;
+            padding: 0.5em 1em;}
+        }
     .help{
+        display: flex;
+        flex-direction: column;
         grid-column: 1/4;
-        grid-row: 5/6;}
-    .help p {
-        padding: .2em;}
+        grid-row: 5/6;
+        border: 1.5px solid $help-bord;
+        margin: 0.5em 1em;
+        font-family: $font-f;
+        h3{
+            font-size: 1em;
+            font-weight: 500;
+        }
+        p {
+            margin: 0.55em 0 0.59em 0;
+            font-size: .65em;
+            padding: .2em;}
+        &-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em;
+            }
+        button{
+            @include header-but (11px, $font, $bg-col, 0, 0 0 -2px 0, 0.55em 0.57em 0.6em 0.55em);
+            border: 2px solid $font;
+            font-weight: 500;
+            align-self: center;
+            cursor: pointer;}
+        }
+        
     .gallery{
        grid-column: 1/4;
         grid-row: 6/7;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));}
-    .gallery img {
-    width: 100%;}
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        margin-top: 0.5em;
+        img {
+            width: 99%;
+            padding: 0.8em;}
+        }
     .sitebar-related {
         display: flex;
         flex-direction: column;
         align-items: center;
         grid-column: 1/4;
-        grid-row: 7/8;}
-    .sitebar-related ul{
-        display: flex;
-        justify-content: space-between;}
-    .sitebar-related li{
-        margin-left: 2em;}
-    .sitebar-related li::before{
-        margin: -10px;
+        grid-row: 7/8;
+        font-family: $font-f;
+        h3{
+            color:$bodyc; 
+            font-weight: 700;
+            font-size: 1.1em;
+            letter-spacing: -0.2px;
+            word-spacing: -1.1px;}
+        ul{
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 1em;}
+        li{
+            margin-left: 2em;
+            a{
+                font-size: 1em;
+                font-weight: 500;
+                color: $h3-sr;
+                text-decoration: underline $font;
+                &:active {
+                border-bottom: 1px solid $bg-but;}
+            }
+        }
     }
     footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         grid-column: 1/4;
         grid-row: 8/9;
+        background-color: $bg-foot;
+        font-family: $font-f;
+        h3{
+            font-size: 0.97em;
+            color: $bg-col;
+            margin: .5em 0;}
+            p {
+            font-size: 0.7em;
+            margin-bottom: 0.6em;}
     }
-    footer p{
-        font-size: 12px;
-    }
+    
+}
 }
